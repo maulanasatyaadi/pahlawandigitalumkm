@@ -40,5 +40,5 @@ Route::get('/thanks', function() {
 })->name('thanks');
 
 Route::get('/', function() {
-    return view('index');
+    return view('register');
 });
