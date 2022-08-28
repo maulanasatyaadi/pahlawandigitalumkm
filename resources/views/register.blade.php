@@ -267,7 +267,7 @@
     
     <script>
       function updateCaptcha() {
-        $('#captcha-img').attr({src: '/captcha?q=' + Date.now()})
+        $('#captcha-img').attr({src: '{{ url('/captcha?q=') }}' + Date.now()})
       }
 
       function uploadFile() {
