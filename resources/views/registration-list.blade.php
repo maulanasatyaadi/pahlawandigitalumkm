@@ -31,22 +31,24 @@
           </thead>
           <tbody>
             @foreach ($registrationList as $item)
-                <tr>
-                  <td>{{$item->title}}</td>
-                  <td>{{$item->email}}</td>
-                  <td>{{$item->phone}}</td>
-                  <td>{{$item->address}}</td>
-                  <td>{{$item->website}}</td>
-                  <td>{{$item->PIC}}</td>
-                  <td>{{$item->startup_criteria}}</td>
-                  <td>{{$item->product_title}}</td>
-                  <td>{{$item->product_age}}</td>
-                  <td>{{$item->active_customer}}</td>
-                  <td>{{$item->industry_sector}}</td>
-                  <td>{{$item->product_operation_field}}</td>
-                  <td>{{$item->other_production_operation_field}}</td>
-                  <td></td>
-                </tr>
+              <tr>
+                <td>{{$item->title}}</td>
+                <td>{{$item->email}}</td>
+                <td>{{$item->phone}}</td>
+                <td>{{$item->address}}</td>
+                <td>{{$item->website}}</td>
+                <td>{{$item->PIC}}</td>
+                <td>{{$item->startup_criteria}}</td>
+                <td>{{$item->product_title}}</td>
+                <td>{{$item->product_age}}</td>
+                <td>{{$item->active_customer}}</td>
+                <td>{{$item->industry_sector}}</td>
+                <td>{{$item->product_operation_field}}</td>
+                <td>{{$item->other_production_operation_field}}</td>
+                <td>
+                  <a href="{{$item->proposal}}" target="_blank">Proposal</a>
+                </td>
+              </tr>
             @endforeach
           </tbody>
         </table>
