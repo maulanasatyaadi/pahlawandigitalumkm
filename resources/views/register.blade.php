@@ -28,7 +28,7 @@
     <link href="{{ url('/css/main.css') }}" rel="stylesheet" media="all">
     <link href="{{ url('/css/custom.css') }}" rel="stylesheet" media="all">
     
-    <base href="{{ url() }}" />
+    <base href="{{ url('/') }}" />
 </head>
 
 <body>
