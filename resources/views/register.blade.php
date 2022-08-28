@@ -34,7 +34,7 @@
         <div class="wrapper wrapper--w790">
             
             <center>
-            <a href="<cms:show k_site_link/>"><img class="logo" style="width:300px;margin-bottom:30px" src="/images/logo.png"/></a>
+            <a href="/"><img class="logo" style="width:300px;margin-bottom:30px" src="/images/logo.png"/></a>
             </center>
             
             <div class="card card-5">
