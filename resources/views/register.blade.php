@@ -36,7 +36,7 @@
         <div class="wrapper wrapper--w790">
             
             <center>
-            <a href="/"><img class="logo" style="width:300px;margin-bottom:30px" src="/images/logo.png"/></a>
+            <a href="/"><img class="logo" style="width:300px;margin-bottom:30px" src="{{ url('/images/logo.png') }}"/></a>
             </center>
             
             <div class="card card-5">
@@ -242,7 +242,7 @@
                           <div class="form-row">
                             <div class="name" style="margin-bottom: 5px">Input Captcha</div>
                             <div style="display: flex; flex-direction: row; margin-bottom: 5px;">
-                              <img id="captcha-img" src="/captcha" alt="" style="margin-right: 5px;">
+                              <img id="captcha-img" src="{{ url('/captcha') }}" alt="" style="margin-right: 5px;">
                               <button class="btn btn--radius-2 btn--red" type=button onclick="updateCaptcha()">Ganti</button>
                             </div>
                             <div class="value">
