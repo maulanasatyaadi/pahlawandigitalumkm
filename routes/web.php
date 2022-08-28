@@ -39,6 +39,8 @@ Route::get('/thanks', function() {
     return view('thanks');
 })->name('thanks');
 
+Route::post('/', [MainController::class, 'submit_registration']);
+
 Route::get('/', function() {
     return view('register');
 });
