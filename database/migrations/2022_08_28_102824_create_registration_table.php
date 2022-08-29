@@ -16,20 +16,20 @@ class CreateRegistrationTable extends Migration
         Schema::create('registration', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('title');
-            $table->text('email');
-            $table->text('phone');
-            $table->text('address');
-            $table->text('website');
-            $table->text('PIC');
-            $table->text('startup_criteria');
-            $table->text('product_title');
-            $table->text('product_age');
-            $table->text('active_customer');
-            $table->text('industry_sector');
-            $table->text('product_operation_field');
-            $table->text('other_production_operation_field');
-            $table->text('proposal');
+            $table->text('title')->nullable();
+            $table->text('email')->nullable();
+            $table->text('phone')->nullable();
+            $table->text('address')->nullable();
+            $table->text('website')->nullable();
+            $table->text('PIC')->nullable();
+            $table->text('startup_criteria')->nullable();
+            $table->text('product_title')->nullable();
+            $table->text('product_age')->nullable();
+            $table->text('active_customer')->nullable();
+            $table->text('industry_sector')->nullable();
+            $table->text('product_operation_field')->nullable();
+            $table->text('other_production_operation_field')->nullable();
+            $table->text('proposal')->nullable();
         });
     }
 
