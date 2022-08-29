@@ -30,6 +30,8 @@ class CreateRegistrationTable extends Migration
             $table->text('product_operation_field')->nullable();
             $table->text('other_production_operation_field')->nullable();
             $table->text('proposal')->nullable();
+            $table->text('app_link')->nullable();
+            $table->text('video_link')->nullable();
         });
     }
 
