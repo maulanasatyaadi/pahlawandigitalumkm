@@ -104,14 +104,6 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Nama Produk/Jasa</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-5" type="text" name="product_title" placeholder="Ketik Nama Produk/Jasa disini" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
                             <div class="name">Berapa lama produk dan jasa beroperasi?</div>
                             <div class="value">
                                 <div class="input-group">
@@ -144,27 +136,11 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Sektor industri apakah yang paling merepresentasikan produk atau jasa yang ditawarkan?</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="industry_sector" required>
-                                            <option disabled="disabled" selected="selected">Pilih salah satu</option>
-                                            <option value="Industri makanan dan minuman">Industri makanan dan minuman</option>
-                                            <option value="Industri Fashion dan Kriya">Industri Fashion dan Kriya</option>
-                                            <option value="Industri Agritech">Industri Agritech</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
                             <div class="name">Jenis bidang operasi yang paling merepresentasikan produk atau jasa yang ditawarkan</div>
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="product_operation_field" required>
+                                        <select name="product_operation_field" required onchange="updateOperationField(this)">
                                             <option disabled="disabled" selected="selected">Pilih salah satu</option>
                                             <option value="Digitalisasi Akses Pasar ">Digitalisasi Akses Pasar </option>
                                             <option value="Digitalisasi pemantauan kualitas produksi">Digitalisasi pemantauan kualitas produksi</option>
@@ -180,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row">
+                        <div id="other-operation-field" class="form-row" style="display: none;">
                           <div class="name">Lainnya, Sebutkan</div>
                           <div class="value">
                               <div class="input-group">
@@ -231,6 +207,22 @@
                             </div>
                         </div>
                         <div class="form-row">
+                            <div class="name">Link apps Playstore/appstore ke produk (jika berupa aplikasi)</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="app_link" placeholder="Link aplikasi Android/iOS">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Link Video team profile atau company profile</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="video_link" placeholder="Link Video">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
                           <div class="value">
                               <div class="input-group tacbox">
                                 <input class="input--style-5" id="checkbox" type="checkbox" />
@@ -266,6 +258,14 @@
     </div>
     
     <script>
+      function updateOperationField(ev) {
+        if (ev.value === 'Lainnya, sebutkan') {
+            $('#other-operation-field').show()
+        } else {
+            $('#other-operation-field').hide()
+        }
+      }
+
       function updateCaptcha() {
         $('#captcha-img').attr({src: '{{ url('/captcha?q=') }}' + Date.now()})
       }

@@ -26,6 +26,8 @@ class MainController extends Controller
         $industry_sector = $request->input('industry_sector');
         $product_operation_field = $request->input('product_operation_field');
         $other_production_operation_field = $request->input('other_production_operation_field');
+        $app_link = $request->input('app_link');
+        $video_link = $request->input('video_link');
         $proposal = $request->file('proposal');
 
         if ($proposal->getSize() > 10000000) {
@@ -47,6 +49,8 @@ class MainController extends Controller
         $registration->industry_sector = $industry_sector;
         $registration->product_operation_field = $product_operation_field;
         $registration->other_production_operation_field = $other_production_operation_field ?? '-';
+        $registration->app_link = $app_link;
+        $registration->video_link = $video_link;
 
         $registration->save();
 
